@@ -3,7 +3,7 @@
 //  GuessTheNumber
 //
 //  Created by Zoe Holderness on 1/8/20.
-//  Copyright © 2020 Zoe Holderness. All rights reserved.
+//  Copyright © 2/Users/Zoe/Documents/git/GuessTheNumber/GuessTheNumber/ViewController.swift020 Zoe Holderness. All rights reserved.
 //
 
 import UIKit
