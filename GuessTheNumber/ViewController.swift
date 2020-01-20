@@ -50,11 +50,14 @@ class ViewController: UIViewController {
     func validateGuess(_ guess: Int) {
         
         // Joseph's Edit
-        if numberOfGuesses > 10 {
+        if numberOfGuesses > 5 {
             let alert = UIAlertController(title: "Oh Nooo!", message: "You lost!", preferredStyle: .alert)
             let action = UIAlertAction(title: "Play again", style: .default, handler:nil)
             alert.addAction(action)
             self.present(alert, animated:true, completion: nil)
+            numberOfGuesses = 0
+            // Restart game
+            generateRandomNumber()
         }
         
         
@@ -72,7 +75,7 @@ class ViewController: UIViewController {
                          "fewestGuesses": numberOfGuesses]
             self.ref.child("Guessing_Numbers").setValue(score)
             //print("You Win!!")
-            //numberOfGuesses = 0
+            numberOfGuesses = 0
             generateRandomNumber()
         }
     }
