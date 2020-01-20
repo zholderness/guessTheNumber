@@ -48,6 +48,17 @@ class ViewController: UIViewController {
     }
     
     func validateGuess(_ guess: Int) {
+        
+        // Joseph's Edit
+        if numberOfGuesses > 10 {
+            let alert = UIAlertController(title: "Oh Nooo!", message: "You lost!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Play again", style: .default, handler:nil)
+            alert.addAction(action)
+            self.present(alert, animated:true, completion: nil)
+        }
+        
+        
+        
         if guess < lowerBound || guess > upperBound {
             showBoundsAlert()
             //print("Your guess should be between 1 and 100")
