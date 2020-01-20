@@ -7,5 +7,6 @@ target 'GuessTheNumber' do
 
   # Pods for GuessTheNumber
 	pod 'Firebase/Auth'
-
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Database'
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -18,15 +19,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var guessLabel: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
-   
+    var ref: DatabaseReference!
+    
     func generateRandomNumber() {
         numberToGuess = Int(arc4random_uniform(100)) + 1
         print("Number to Guess:\(numberToGuess)")
+        // let key be the number to guess
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         generateRandomNumber()
+     
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -51,11 +57,15 @@ class ViewController: UIViewController {
             guessLabel.text = "Lower!"
         } else {
             showWinsAlert()
+            let score = ["numberToguess":numberToGuess,
+                         "fewestGuesses": numberOfGuesses]
+            self.ref.child("Guessing_Numbers").setValue(score)
             //print("You Win!!")
             //numberOfGuesses = 0
             generateRandomNumber()
         }
     }
+   
     
     func showBoundsAlert() {
         let alert = UIAlertController(title: "Hey!", message: "Your guess should be between 1 and 100", preferredStyle: .alert)
