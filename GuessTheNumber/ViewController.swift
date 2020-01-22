@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var numberToGuess: Int!
     var numberOfGuesses = 0
     
+    @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var guessLabel: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
@@ -71,8 +72,9 @@ class ViewController: UIViewController {
             guessLabel.text = "Lower!"
         } else {
             showWinsAlert()
+            let nameText = name.text
             let score = ["numberToguess":numberToGuess,
-                         "fewestGuesses": numberOfGuesses]
+                         "fewestGuesses": numberOfGuesses, "name": nameText] as [String : Any]
             self.ref.child("Guessing_Numbers").setValue(score)
             //print("You Win!!")
             numberOfGuesses = 0
