@@ -17,6 +17,7 @@
 		C8BFE87723D64E3200BC6029 /* BeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFE87623D64E3200BC6029 /* BeginViewController.swift */; };
 		C8BFE87923D64FC800BC6029 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFE87823D64FC800BC6029 /* SignUpViewController.swift */; };
 		C8BFE87B23D650A300BC6029 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFE87A23D650A300BC6029 /* LoginViewController.swift */; };
+		C8BFE87D23D80C1200BC6029 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C8BFE87C23D80C1200BC6029 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C8BFE87623D64E3200BC6029 /* BeginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginViewController.swift; sourceTree = "<group>"; };
 		C8BFE87823D64FC800BC6029 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C8BFE87A23D650A300BC6029 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C8BFE87C23D80C1200BC6029 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D991F171387D160F9397C203 /* Pods-GuessTheNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumber.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumber/Pods-GuessTheNumber.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C85D052923C6A629004BA86D /* AppDelegate.swift */,
+				C8BFE87C23D80C1200BC6029 /* README.md */,
 				C8BFE87623D64E3200BC6029 /* BeginViewController.swift */,
 				C85D052B23C6A629004BA86D /* ViewController.swift */,
 				C85D052D23C6A629004BA86D /* Main.storyboard */,
@@ -162,6 +165,7 @@
 			files = (
 				C878BE1523D549020083605A /* GoogleService-Info.plist in Resources */,
 				C85D053423C6A62B004BA86D /* LaunchScreen.storyboard in Resources */,
+				C8BFE87D23D80C1200BC6029 /* README.md in Resources */,
 				C85D053123C6A62B004BA86D /* Assets.xcassets in Resources */,
 				C85D052F23C6A629004BA86D /* Main.storyboard in Resources */,
 			);

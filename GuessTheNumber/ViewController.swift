@@ -72,10 +72,10 @@ class ViewController: UIViewController {
             guessLabel.text = "Lower!"
         } else {
             showWinsAlert()
-            let nameText = name.text
+            let nameText = name.text ?? "none"
             let score = ["numberToguess":numberToGuess,
-                         "fewestGuesses": numberOfGuesses, "name": nameText] as [String : Any]
-            self.ref.child("Guessing_Numbers").setValue(score)
+                         "fewestGuesses": numberOfGuesses] as [String : Any]
+            self.ref.child(nameText).setValue(score)
             //print("You Win!!")
             numberOfGuesses = 0
             generateRandomNumber()
